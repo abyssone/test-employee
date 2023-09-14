@@ -34,6 +34,6 @@ public class EmployeeController {
     public void addEmployee(@RequestParam(name = "name") String name,
                             @RequestParam(name = "email") String email,
                             @RequestParam(name = "password") String password) {
-        System.out.println(name + " " + email + " " + password);
+        System.out.println("Новый сотрудник:" + name + " " + email + " " + password);
     }
 }
