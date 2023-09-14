@@ -8,10 +8,36 @@
     <artifactId>test-employee</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <url>https://github.com/abyssone/test-employee</url>
+
+    <contributors>
+        <contributor>
+            <name>Dmitry</name>
+            <url>https://github.com/abyssone</url>
+        </contributor>
+    </contributors>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
