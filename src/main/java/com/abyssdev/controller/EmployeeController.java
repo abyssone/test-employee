@@ -5,6 +5,8 @@ import com.abyssdev.service.EmployeeService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -26,5 +28,12 @@ public class EmployeeController {
             System.out.println(e.getMessage());
         }
         return resp;
+    }
+
+    @PostMapping("/")
+    public void addEmployee(@RequestParam(name = "name") String name,
+                            @RequestParam(name = "email") String email,
+                            @RequestParam(name = "password") String password) {
+        System.out.println("Новый сотрудник:" + name + " " + email + " " + password);
     }
 }
