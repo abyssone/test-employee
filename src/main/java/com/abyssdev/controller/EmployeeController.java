@@ -31,10 +31,11 @@ public class EmployeeController {
     }
 
     @PostMapping("/")
-    public void addEmployee(@RequestParam(name = "name") String name,
+    public List<Employee> addEmployee(@RequestParam(name = "name") String name,
                             @RequestParam(name = "email") String email,
                             @RequestParam(name = "password") String password) {
         System.out.println("Новый сотрудник:" + name + " " + email + " " + password);
         employeeService.save(name, email, password);
+        return employeeService.findAll();
     }
 }
