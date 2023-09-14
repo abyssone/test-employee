@@ -8,7 +8,7 @@ public interface EmployeeService {
 
     List<Employee> findAll();
     Employee findByName();
-    void save(Employee employee);
+    void save(String name, String email, String password);
     void delete(Employee employee);
 
 }

@@ -22,8 +22,9 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
-    public void save(Employee employee) {
-
+    public void save(String name, String email, String password) {
+        Employee newEmployee = new Employee(name, email, password);
+        inMemoryStorage.save(newEmployee);
     }
 
     @Override

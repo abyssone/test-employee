@@ -22,4 +22,8 @@ public class InMemoryStorage {
     public List<Employee> getAll() {
         return employeeStorage;
     }
+
+    public void save(Employee employee) {
+        employeeStorage.add(employee);
+    }
 }

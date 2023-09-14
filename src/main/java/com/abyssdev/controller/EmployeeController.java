@@ -35,5 +35,6 @@ public class EmployeeController {
                             @RequestParam(name = "email") String email,
                             @RequestParam(name = "password") String password) {
         System.out.println("Новый сотрудник:" + name + " " + email + " " + password);
+        employeeService.save(name, email, password);
     }
 }
